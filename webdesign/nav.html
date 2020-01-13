@@ -8,7 +8,7 @@
 			padding: 0;
 			margin: 0;
 			font-family: 'Do Hyeon', sans-serif;
-			font-size: 20px;
+
 		}
 		ul{
 			padding: 0;
@@ -22,17 +22,48 @@
 		.wrap{
 			width: 100%;
 			height: 50px;
-			background-color: #ffeaa7;
+			background-color: #fec8c9;
 		}
 		.ulnav > li > a{ /* 자식선택자 : .ulnav 바로 다음 하위의 li태그들만 선택 */
 
 			float : left;
-			color : #ff7675;
+			color :#444f59;
 			line-height: 50px;
 			padding: 0 10px;
 		}
-		.ulnav > li > a:hover{/*.ulnav a 로도 줄 수 있음. 한칸띄우면 자손임*/
-			background-color:  #fab1a0;
+		.ulnav > li:hover{/*.ulnav a 로도 줄 수 있음. 한칸띄우면 자손임*/
+			background-color:  #fd999a;
+		}
+		/*내 자식만 관리 가능함, 형제X, 부모X*/
+		.ulnav > li:hover .dropdown{
+			display: block;
+		}
+		}
+		.ulnav >li{
+			position: relative;
+			display: inline-block;
+			height: 50px;
+		}
+		.dropdown{
+			position: absolute;
+			top: 50px;
+			left: 0;
+			width: 100%;
+			display: none;
+		}
+		.dropdown > a{
+			display: block;
+			background-color: #d8e9ef;
+			color: #444f59;
+			font-size: 12px;
+			text-align: center;
+			padding: 3px 0;
+
+		}
+		.dropdown > a:hover {
+			background-color:#d3e0f7; 
+			color:white;
+			text-decoration : underline;
 		}
 
 		
@@ -43,7 +74,15 @@
 		<ul class="ulnav">
 			<li><a href="#">Best</a></li>
 			<li><a href="#">New</a></li>
-			<li><a href="#">아우터</a></li>
+			<li><a href="#">아우터</a>
+				<div class="dropdown">
+					<a href="#">패딩점퍼</a>
+					<a href="#">가디건</a>
+					<a href="#">야상자켓</a>
+					<a href="#">블레이저</a>
+				</div>
+			</li>
+			
 			<li><a href="#">상의</a></li>
 			<li><a href="#">하의</a></li>			
 		</ul>
