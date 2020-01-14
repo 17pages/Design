@@ -164,9 +164,10 @@
 			color: #1fbc02;
 			text-decoration: underline;
 		}
-		#footer ul li: first-child{
+		#footer ul li:first-child{
 			/*first child 첫번째 자식만*/
-			/*!important 우선순위가 제일 높음 그래서 무조건 적용됨, 자주 쓰면 안됨*/
+			/*!important 우선순위가 제일 높음 그래서 무조건 적용됨, 자주 쓰면 안됨
+			 선택자라서 li:first-child 처럼 붙여써야함 공백있으면 안됨*/
 			border-left: 0px!important;
 		}
 		#addr_logo{
@@ -220,7 +221,7 @@
 						<td id="state">
 							<input type="checkbox" id="loginck">
 							<label for="loginck" class="label1">
-								&nbsp로그인 상태 유지
+								&nbsp; 로그인 상태 유지
 							</label>
 						</td>
 						<td id="secure">
@@ -262,7 +263,7 @@
 				</span>
 				<span>Copyright</span>
 				<span>ⓒ</span>
-				<span><strong><a href="#">NAVER Crop.</a></strong></span>
+				<span><strong><a href="#">NAVER Corp.</a></strong></span>
 				<span>All Rights Reserved.</span>
 			</div>
 		</div>
