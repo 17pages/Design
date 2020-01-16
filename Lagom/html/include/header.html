@@ -2,6 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	<script src="https://kit.fontawesome.com/825f57de13.js" crossorigin="anonymous"></script>
 	<title>LAGOM</title>
 	<link rel="stylesheet" type="text/css" href="../../css/common.css">
 	<style type="text/css">
@@ -20,13 +21,140 @@
 			border-right: 1px solid red;
 			display: flex;
 			justify-content: space-between;
+			/*크기와 상관없이 가운데 세로가 수평정렬됨*/
 			align-items: center;
 		}
 		/*이런거 배치할때 flex쓰는거*/
-		.header_content_logo {background-color: red;}
-		.header_content_search {background-color: blue;}
+		.header_content_logo {}
+		.header_content_search {}
+		.header_content_search_group{
+			display: flex;
+			align-items: center;
+			background-color: #f2f3f5;
+			border-radius: 2px;
+		}
+		.header_content_search_input{
+			background-color: transparent;
+			border-color: transparent;
+			font-size: 13px;
+			width: 260px;
+			height: 44px;
+			border-radius: 2px;
+			padding: 10px 12px;
+			outline: none;
+			/*input 태그 focus시 파랑테두리*/
+		}
+		.header_content_search_btn {
+			/* transparent : 투명으로 해줌*/
+			background-color: transparent;
+			border-color: transparent;
+			width : 44px;
+			height: 44px;
+			cursor : pointer;
+			color: #8a6d5c;
+			border-top-right-radius: 2px;
+			border-bottom-right-radius: 2px;
+			
+
+		}
+		.header_content_search_btn:hover{
+			background-color: #8a6d5c;
+			color: white;
+		}
 		.header_content_nav {background-color: green;}
-		.header_content_member {background-color: yellow;}
+		.header_content_member {
+			/*width: 160px;*/
+			display: flex;
+			align-items : center;
+			/*남아있는 여백을 space-between을 써서 끝으로 밀어버림 그래서 버튼 사이에
+			여백이 있어보임.*/
+			justify-content: space-between;
+			flex-direction: row; /*default(생략가능)*/
+		}
+		.header_content_member > div {
+			padding: 10px 0px 10px 3px;
+		}
+		.header_content_member_mypage {
+			position: relative;
+		}
+		.header_content_member_first:hover .header_dropdown {
+			display: block;
+		}
+
+		.header_content_member_mypage > a {
+			display: inline-block;
+			padding:  12px 15px;
+			font-weight: 400;
+			border: 1px solid transparent;
+			border-radius: 2px;
+			height: 45px;
+			color: #506763;
+			/*글자를 수직으로 정렬하기 위해서. height랑 맞춰서. */
+			line-height: 19px;
+
+		}
+		.header_content_member_first:hover > div> a,
+		.header_content_member_cart:hover >a {
+			background-color: rgba(20, 23, 28, .05);
+			border-color: rgba(20,23,28,.05);
+		}
+		.header_content_member_cart > a{
+			display: inline-block;
+			width: 45px;
+			height: 45px;
+			border-radius: 50%;
+			color: #506763;
+			border: 1px solid transparent;
+			text-align: center;
+			padding: 12px;
+			line-height: 19px;
+		}
+		.header_content_logo_img {
+			max-width: 130px;
+			vertical-align: middle;
+		}
+		.header_dropdown_menu{
+			border-bottom-left-radius: 2px;
+			border-bottom-right-radius: 2px;
+			box-shadow: 0 4px 16px rgba(20,23,28,.15);
+			background-color: white;
+			padding: 10px 0;
+			
+		}
+		.header_dropdown_menu a {
+			display: inline-block;
+			font-size: 15px;
+			color: #505763;
+			text-align: center;
+			padding: 5px 15px;
+			font-weight: 400;
+			width: 130px;
+			position: relative;
+			z-index: 100;
+		}
+
+		.header_dropdown_menu a:hover {
+			color: #668699;
+			background-color: #f2f3f5;
+		}
+		.header_dropdown {
+			position: absolute;
+			top: 50px;
+			left: 0;
+			display: none;
+		}
+		.arrow {
+			position: absolute;
+			top: -6px;
+			left:14px;
+			width: 15px;
+			height: 15px;
+			transform: rotate(45deg);
+			background-color: white;
+			border-color: transparent transparent #fff transparent;
+			z-index: 99;
+		}
+		
 	</style>
 </head>
 <body>
@@ -34,19 +162,51 @@
 		<div class="header_wrap">
 			<div class="header_content">
 				<div class="header_content_logo">
-					<img src="">
-					<span>LAGOM</span>
+					<a href="#">
+					<img class="header_content_logo_img" src="../../img/logo_brown.png">
+					<span></span>
+					</a>
 				</div>
-				<div class="header_content_search">물음표</div>
+				<div class="header_content_search">
+					<form name="frm_search" action="" method="GET">
+						<div class="header_content_search_group">
+							<input type="text" name="keyword" placeholder="상품검색" class="header_content_search_input">
+							<button type="button" class="header_content_search_btn"><i class="fas fa-search"></i></button>
+						</div>
+					</form>
+
+				</div>
 				<div class="header_content_nav">
 					<a href="">카테고리</a>
 					<a href="">스토어</a>
 					<a href="">커뮤니티</a>
 				</div>
 				<div class="header_content_member">
-					<a href="#">로그인</a>
-					<a href="#">회원가입</a>
-			    </div>
+					<div class="header_content_member_first">
+						<div class="header_content_member_mypage">
+							<a href="#">마이페이지</a>
+						    <div class="header_dropdown">
+								<div class="arrow"></div>
+								<ul class="header_dropdown_menu">
+									<li><a href="#">주문/배송조회</a></li>
+									<li><a href="#">위시리스트</a></li>
+									<li><a href="#">마이포인트</a></li>
+									<li><a href="#">1:1 문의</a></li>
+									<li><a href="#">회원정보수정</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				<div>
+					<div class="header_content_member_cart">
+						<a href="#"><i class="fas fa-shopping-cart"></i></a>
+					</div>
+				</div>
+					<!-- div는 diplay특성이 inline-block -->
+					<div><button type="button" class="btn btn-basic">로그인</button></div>
+					<div><button type="button" class="btn btn-primary">회원가입</button>
+					</div>
+				 </div>
 		    </div>
 	    </div>
 	</header>
