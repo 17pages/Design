@@ -17,8 +17,7 @@
 			margin: 0 auto;
 			height: 65px;
 			box-sizing:  border-box;
-			border-left: 1px solid red;
-			border-right: 1px solid red;
+			
 			display: flex;
 			justify-content: space-between;
 			/*크기와 상관없이 가운데 세로가 수평정렬됨*/
@@ -61,7 +60,14 @@
 			background-color: #8a6d5c;
 			color: white;
 		}
-		.header_content_nav {background-color: green;}
+		.header_content_nav {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			width: 320px;
+		}
+
+		
 		.header_content_member {
 			/*width: 160px;*/
 			display: flex;
@@ -74,17 +80,17 @@
 		.header_content_member > div {
 			padding: 10px 0px 10px 3px;
 		}
-		.header_content_member_mypage {
+		.header_content_dropdwon_group {
 			position: relative;
 		}
-		.header_content_member_first:hover .header_dropdown {
+		.header_content_dropdown_wrap:hover .header_dropdown {
 			display: block;
 		}
 
-		.header_content_member_mypage > a {
+		.header_content_dropdwon_group > a {
 			display: inline-block;
 			padding:  12px 15px;
-			font-weight: 400;
+			font-weight: 600;
 			border: 1px solid transparent;
 			border-radius: 2px;
 			height: 45px;
@@ -93,7 +99,7 @@
 			line-height: 19px;
 
 		}
-		.header_content_member_first:hover > div> a,
+		.header_content_dropdown_wrap:hover > div> a,
 		.header_content_member_cart:hover >a {
 			background-color: rgba(20, 23, 28, .05);
 			border-color: rgba(20,23,28,.05);
@@ -102,13 +108,14 @@
 			display: inline-block;
 			width: 45px;
 			height: 45px;
-			border-radius: 50%;
+			
 			color: #506763;
 			border: 1px solid transparent;
 			text-align: center;
 			padding: 12px;
 			line-height: 19px;
 		}
+	
 		.header_content_logo_img {
 			max-width: 130px;
 			vertical-align: middle;
@@ -155,6 +162,10 @@
 			z-index: 99;
 		}
 		
+		.header_content_nav > div {
+			padding: 10px 0;
+		}
+		
 	</style>
 </head>
 <body>
@@ -167,6 +178,28 @@
 					<span></span>
 					</a>
 				</div>
+				
+				<div class="header_content_nav">
+					<div class="header_content_dropdown_wrap">
+						<div class="header_content_dropdwon_group">
+						<!-- 네비게이션 -->
+							<a href="#" class="magicline"><i class="fas fa-bars"></i> 카테고리</a>
+								<div class="header_dropdown">
+									<div class="arrow"></div>
+										<ul class="header_dropdown_menu">
+											<li><a href="#">가구</a></li>
+											<li><a href="#">패브릭</a></li>
+											<li><a href="#">주방</a></li>
+											<li><a href="#">생활용품</a></li>
+											<li><a href="#">홈데코</a></li>
+										</ul>
+								</div>
+						</div>
+					</div>
+					<div class="header_content_dropdwon_group"><a href="#" class="magicline">스토어</a></div>
+					<div class="header_content_dropdwon_group"><a href="#" class="magicline">커뮤니티</a></div>
+				</div>
+
 				<div class="header_content_search">
 					<form name="frm_search" action="" method="GET">
 						<div class="header_content_search_group">
@@ -176,15 +209,15 @@
 					</form>
 
 				</div>
-				<div class="header_content_nav">
-					<a href="">카테고리</a>
-					<a href="">스토어</a>
-					<a href="">커뮤니티</a>
-				</div>
+
+
 				<div class="header_content_member">
-					<div class="header_content_member_first">
-						<div class="header_content_member_mypage">
-							<a href="#">마이페이지</a>
+					<!-- div(first) 로 더 크게 감싸버림  드롭다운 메뉴는 드롭다운 그룹에서는 나갔지만 first로 묶어놨으니까 포지션을 다르게 주었어도 작동함.-->
+					<div class="header_content_dropdown_wrap">
+						<div class="header_content_dropdwon_group">
+							<a href="#" class="user"><i class="fas fa-user"></i></a>
+
+							<!-- dropdown 메뉴 -->
 						    <div class="header_dropdown">
 								<div class="arrow"></div>
 								<ul class="header_dropdown_menu">
