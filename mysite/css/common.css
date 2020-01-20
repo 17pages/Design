@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css?family=Gothic+A1:500&display=swap');
+		/*공통사항*/
+		*{box-sizing: border-box;}
+		body{
+			background-color: 
+			font-family: 'Gothic A1', sans-serif;
+			margin: 0;
+			padding: 0;
+			font-size: 14px;
+			color: #262626;
+			background-color: #f1f1f1;
+	    }
+	    ul {
+	    	margin: 0;
+	    	padding: 0;
+	    	list-style: none;
+	    }
+	    a {
+	    	color: inherit;
+	    	/*inherit : 부모에게 상속받은 색을 사용하라*/
+	    	text-decoration: none;
+	    }
+	    	
+		
+		/*Text에 밑줄 쳐지는 css 효과*/
+		.magicline:after {
+			content: '';
+			display: block;
+			width: 0;
+			height: 2px;
+			background-color: #8a6d5c;
+			transition: width .3s;
+			
+		}
+		.magicline:hover:after {
+			width: 100%;
+		}
+
+/* 판넬 3D css 효과*/
+		.layer{
+			box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19)
+
+		}
