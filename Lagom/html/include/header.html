@@ -166,9 +166,115 @@
 			padding: 10px 0;
 		}
 		
+		/*모달 로그인 창*/
+		.modal_wrap {
+			position : fixed;
+			z-index: 1000;
+			background-color: rgba(0,0,0,0.4);
+			overflow: auto;
+			width : 100%;
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+		}
+		.modal_content {
+			width : 360px;
+			height : 593px;
+			padding : 40px 30px;
+			background-color: white;
+			box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);
+			border-radius : 2px;
+			overflow: hidden;
+			border : 1px solid red;
+		}
+		.modal_header{
+			display: block;
+			margin: 0 0 30px;
+			border : 1px solid blue;
+		}
+		.modal_header_link{
+			display : block;
+			text-align: center;
+		}
+		div.div_input{
+			background-color: white;
+			border : 1px solid green;
+			width : 300px;
+			height: 50px;
+		}
+		a#btn_login {
+			display : block;
+			background-color: #8a6d5c;
+			color: white;
+			font-size: 17px;
+			width: 100%;
+			height : 50px;
+			margin: 20px 0;
+			padding: 13px 15px;
+			line-height: 1.41;
+			text-align: center;
+			font-weight: bold;
+			border-radius: 4px;
+
+		}
+
+
+
+
 	</style>
 </head>
 <body>
+	<div class="modal_wrap">
+		<div class="modal_content">
+			<h1 class="modal_header">
+				<a href="#" class="modal_header_link">
+					<span class="icon_lagom">로고로고</span>
+				</a>	
+			</h1>
+
+
+			<div class="modal_login">
+				<div class="div_input" id="logom_id">
+					<span class="input_box"><input type="text" placeholder="아이디" class="input_login" id="inputid"></span>
+				</div>
+				<div class="div_input" id="logam_pw">
+					<span class="input_box">
+						<input type="password" placeholder="비밀번호" class="input login" id="inputpw">
+					</span>
+				</div>	
+				<div>
+					<a href="#" id="btn_login">로그인</a>
+				</div>
+				<div id="member">
+					<a href="#">아이디찾기</a>&nbsp;
+					<span class="si">|</span>
+					<a href="#">비밀번호찾기</a>&nbsp;
+					<span class="si">|</span>
+					<a href="#">회원가입</a>
+
+				</div>
+
+				<div></div>
+				
+			</div>
+			<div class="modal_sign">
+				
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
 	<header>
 		<div class="header_wrap">
 			<div class="header_content">
