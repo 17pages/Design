@@ -174,36 +174,51 @@
 			overflow: auto;
 			width : 100%;
 			height: 100%;
-			display: flex;
+			display: none;
 			justify-content: center;
 			align-items: center;
 
 		}
 		.modal_content {
+			position: relative;
 			width : 360px;
 			height : 593px;
-			padding : 40px 30px;
+			padding : 25px 25px;
 			background-color: white;
 			box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);
 			border-radius : 2px;
 			overflow: hidden;
-			border : 1px solid red;
+			
 		}
+		.login_close{
+			position: absolute;
+			top : 7px;
+			right: 7px;
+		}
+		.login_close > button {
+			color: rgb(142, 142, 142);
+			border : none;
+			background : white;
+			font-size: 30px;
+			cursor: pointer;
+			outline: none;
+		}
+		.login_close>button:hover{
+			color : #8a6d5c;
+		}
+
+		
 		.modal_header{
 			display: block;
-			margin: 0 0 30px;
-			border : 1px solid blue;
+			text-align: center;
+			
 		}
 		.modal_header_link{
 			display : block;
-			text-align: center;
+			margin: 25px 0 5px 0;
+
 		}
-		div.div_input{
-			background-color: white;
-			border : 1px solid green;
-			width : 300px;
-			height: 50px;
-		}
+	
 		a#btn_login {
 			display : block;
 			background-color: #8a6d5c;
@@ -219,6 +234,121 @@
 			border-radius: 4px;
 
 		}
+		div.div_input{
+			background-color: #ebeded;
+			width :100%;
+			height: 50px;
+			margin: 0;
+			font-size: 15px;
+			line-height: 50px;
+			color: #424242;
+			padding:0 15px;
+			margin-bottom: 10px;
+			position: relative;
+
+			
+		}
+		span.input_box{
+			display: block;
+			/*넘어간 것을 숨김*/
+			overflow: hidden;
+
+		}
+
+		input.input_login{
+			border-width: 0px;
+			width: 260px;
+			padding : 7px 0px 6px 0px;
+			
+		}
+
+		#input_id, #input_pw{
+			outline: none;
+			width: 100%;
+			height : 38px;
+			background-color: #ebeded;
+		}
+		.input_pw{
+			position: relative;
+		}
+		.pw_eye{
+			position: absolute;
+			color : #aaa;
+			font-size:  17px;
+			top: 0px;
+			right: 7px;
+			cursor: pointer;
+			height : 50px;
+			line-height : 50px;
+			width: 30px;
+			text-align: center;
+		}
+
+		.member {
+			display : flex;
+			color: #3d3c3c;
+			font-size: 13px;
+			justify-content: center;
+			text-align: center;
+			font-weight: bold;
+
+
+		}
+		
+
+	
+		.simple{
+			padding: 20px 0;
+			font-size: 0;
+			text-align : center;
+			font-size: 12px;
+			margin-bottom : 2px;
+			
+			color: #3d3c3c;
+
+
+		}
+
+		.sns_wrap{
+			display:flex;
+			justify-content: center;
+			align-items: center;
+			height:100px;
+			border-bottom: 1px solid #d7d6d6;
+			text-align: center;
+			
+		}
+
+		.simple> sns_logo{
+			width: 100%;
+			height:78px;
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			padding-top: 10px;
+
+		}
+		.naver, .facebook{
+			padding : 0 9px;
+		}	
+
+		.modal_notuser{
+			text-align : center;
+			display: flex;
+			justify-content: center;
+			font-weight: bold;
+			color: #747474;
+			cursor : pointer;
+		}
+
+		.modal_notuser:hover{
+			text-decoration : underline;
+
+		}
+
+
+		
+
 
 
 
@@ -228,39 +358,59 @@
 <body>
 	<div class="modal_wrap">
 		<div class="modal_content">
-			<h1 class="modal_header">
+			<div class="login_close">
+				<button><i class="fas fa-times"></i></button>
+			</div>	
+				
+			<div class="modal_header">
 				<a href="#" class="modal_header_link">
-					<span class="icon_lagom">로고로고</span>
+					<span class="icon_lagom"><img src="../../img/logo_brown.png" width="160px" height="80px"></span>
 				</a>	
-			</h1>
+			</div>
 
 
 			<div class="modal_login">
 				<div class="div_input" id="logom_id">
-					<span class="input_box"><input type="text" placeholder="아이디" class="input_login" id="inputid"></span>
+					<input type="text" placeholder="이메일" class="input_login" id="input_id">
+						<span class="input_box"></span>
 				</div>
 				<div class="div_input" id="logam_pw">
-					<span class="input_box">
-						<input type="password" placeholder="비밀번호" class="input login" id="inputpw">
-					</span>
+					<div class="input_pw">
+						<input type="password" placeholder="비밀번호" class="input_login" id="input_pw">
+						<span class="pw_eye">
+						<i class="fas fa-eye-slash"></i>
+						</span>
+					</div>	
 				</div>	
+				
+
 				<div>
 					<a href="#" id="btn_login">로그인</a>
 				</div>
-				<div id="member">
-					<a href="#">아이디찾기</a>&nbsp;
-					<span class="si">|</span>
-					<a href="#">비밀번호찾기</a>&nbsp;
-					<span class="si">|</span>
-					<a href="#">회원가입</a>
+				
 
+				<div class="member">
+					<a href="#">아이디찾기</a>&nbsp;
+					<span class="si">|</span>&nbsp;
+					<a href="#">비밀번호찾기</a>&nbsp;
+					<span class="si">|</span>&nbsp;
+					<a href="#">회원가입</a>
 				</div>
 
-				<div></div>
 				
+				<div class="simple" id="simple">
+					<span class="simple">SNS 계정으로 간편 로그인</span>
+						<div class="sns_wrap">
+							<div class="sns_logo" ><a href="#" class="naver"><img src="../../img/naver_round.png" width="48px" height="48px"></a></div>
+							<div class="sns_logo"><a href="#" class="facebook"><img src="../../img/facebook_logo2.png" width="48" height="48"></a></div>
+							<div class="sns_logo"><a href="#" class="facebook"><img src="../../img/ic-kakao.svg" width="50" height="50"></a></div>
+						</div>
+				</div>
+			
 			</div>
-			<div class="modal_sign">
-				
+			
+			<div class="modal_notuser">
+				<span>비회원 주문 조회하기</span>
 			</div>
 		</div>
 	</div>
@@ -342,7 +492,7 @@
 					</div>
 				</div>
 					<!-- div는 diplay특성이 inline-block -->
-					<div><button type="button" class="btn btn-basic">로그인</button></div>
+					<div><button type="button" class="btn btn-basic login_open">로그인</button></div>
 					<div><button type="button" class="btn btn-primary">회원가입</button>
 					</div>
 				 </div>
@@ -350,4 +500,93 @@
 	    </div>
 	</header>
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript">
+		//jQuery 문법
+		//$('선택자').옵션();
+		//$('test').css('color', 'green');
+		//$=jQuery
+		//('#test') = 선택자(id가 test)
+		//.css() = 옵션(글자색을 녹색)
+
+		//jQuery 이벤트 문법(클릭, 포커스, 블러 등)
+		//$(document).on('이벤트', '선택자', function(){
+		//             이벤트 발생시 동작할 내용들
+		//});
+
+		//$(document).on('click', '#test', function(){
+		//        	$(this).css('color', 'blue');	
+		//	});
+
+		//$(document).on() 	= 문서전체에서
+		//('click') 		= 클릭이벤트가 발생하면
+		//(#'test') 		= 아이디가 test인
+		//function() {} 	= 익명함수 (이름없는 함수)
+		// $(this) 			= 나 자신(여기서는 #test)
+		// 해석 : 문서전체에서 id가 test인 태그가 클릭되면 나를(#test) 글자색을 blue로
+		//        변경해라 
+
+
+		//로그인 input(id, pw) 에 focus되면 테두리색 변경
+		$(document).on('focus', '.div_input', function(){
+			$(this).css('border', '1px solid #cac9c9');
+		});
+
+		$(document).on('blur', '.div_input', function(){
+			$(this).css('border', '1px solid transparent');
+		});
+
+
+
+
+	//click 이벤트 실행되는 지 알려면 alert('test') 이거 꼭 해봐야함~ (테스트용도)
+	$(document).on('click','.login_open', function(){
+		//login 버튼 클릭시 modal창 open
+		$('.modal_wrap').css('display', 'flex');
+		$('#input_id').focus();
+
+	});
+
+	//MODAL 창의 X버튼을 클릭하면 MODAL창 Close
+	$(document).on('click', '.login_close', function(){
+		$('.modal_wrap').css('display', 'none');
+		$('.input_login').val('');
+		//$('.frm_login')[0].reset();
+		$('.pw_eye').prev().attr('type', 'password');
+		$('.pw_eye').html('<i class="fas fa-eye-slash"></i>').css('color','#AAA');
+	});
+
+	//LOGIN modal창 암호 보이기 or 숨기기
+	$(document).on('click', '.pw_eye', function(){
+		var code = $(this).prev().attr('type');
+		
+		if(code == 'password') {
+			$(this).prev().attr('type', 'text');
+			$(this).html('<i class="fas fa-eye"></i>').css('color','#666');
+		}else{
+			$(this).prev().attr('type', 'password');
+			$(this).html('<i class="fas fa-eye-slash"></i>').css('color','#AAA');
+		}
+
+
+		//값을 가져오는 방법
+		// <span class="aaa"> 동토리 </spna>
+		// <input type= "text" class="dobby">동비</input>
+
+		//input태그 값 가져오는 방법
+		// : 서버단으로 값을 보낼때 사용하는 태그들이 대부분
+		// $('.dobby').val();
+		//input태그 값 넣는 방법
+		// $('.dobby').val('메롱');
+
+		//input태그 이외의 값 가져오는 방법
+		//$('.aaa').text();
+		//input 태그 이외의 값 넣는 방법
+		//$('.aaa').text('뭐시여??');
+
+		//태그의 옵션(attribute)을 가져오고 싶을때
+		// $('.dobby').attr('type'); 
+		// $('.dobby').attr('class'); 
+	});
+</script>
 </html>
