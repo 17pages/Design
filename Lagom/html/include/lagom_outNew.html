@@ -75,9 +75,19 @@
 			
 			 
 		}
-		.header_content{
-			padding-left: 10px;
+		.header_content {
+			position: relative;
+			padding: 0 0 5px 5px;
+			margin-bottom: 5px;
 		}
+	
+		.header_content li{
+			padding-left: 10px;
+			color: #333
+			font-size : 12px;
+			background : url('../../img/blet_bar.gif') 0 8px no-repeat;
+		}
+
 
 		.header_content > ul> li {
 
@@ -206,7 +216,7 @@
 			position: relative;
 			width : 350px;
 			height : 150px;
-			padding : 25px 25px;
+			padding : 30px 25px;
 			background-color: white;
 			box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);
 			border-radius : 2px;
@@ -233,11 +243,10 @@
 		.btn_wrap {
 			display : flex;
 			justify-content: space-around;
-			
-			
-			
-						
 		}
+
+
+
 		.btn_choice{
 			display : flex;
 			justify-content: space-around;
@@ -248,8 +257,9 @@
 			margin: 20px 10px;
 			padding: 13px 15px;
 			width: 100px;
-			height : 50px;
+			height : 40px;
 			border-radius: 2px;
+
 			
 
 		}
@@ -257,6 +267,20 @@
 			font-weight :700;
 			font-size: 18px;
 			text-align: center;
+			padding-top: 15px;
+		}
+
+		.btn_yes:hover{
+			background-color: #158bd1;
+			border-color: transparent;
+		}
+		.btn_no:hover{
+			background-color: #158bd1;
+			border-color: transparent;
+		}
+		.button_small:hover{
+			background-color: #158bd1;
+			border-color: transparent;
 		}
 
 
@@ -359,9 +383,9 @@
 			<div class="header_content">
 				<h3 class="header_title">회원탈퇴</h3>
 				<ul>
-					<li>- 회원 탈퇴시 적립금, 예치금, 쿠폰, 마일리지, LAGOM상품권 등의 LAGOM 통장이 자동삭제 됩니다.</li>
-					<li>- <font color="red">출고 이전 주문이 있을 경우 상품 배송 처리 문제로 탈퇴 불가합니다.(주문 취소 혹은 출고 이후 탈퇴 가능)</font></li>
-					<li>- 고객님의 거래내역은 전자상거래 등에서의 소비자보호에 관한 법률 제6조 및 동법 시행령 제 6조에 의거하여 표시 및 광고에<br>관한 기록은 6월, 계약 또는 청약 철회 등에 관한 기록은 5년, 대금결제 및 재화 공급 등의 공급에 관한 기록은 5년, 소비자 불만<br> 또는 분쟁처리에 관한 기록은 3년간 기록됩니다.</li>
+					<li>회원 탈퇴시 적립금, 예치금, 쿠폰, 마일리지, LAGOM상품권 등의 LAGOM 통장이 자동삭제 됩니다.</li>
+					<li><font color="red">출고 이전 주문이 있을 경우 상품 배송 처리 문제로 탈퇴 불가합니다.(주문 취소 혹은 출고 이후 탈퇴 가능)</font></li>
+					<li>고객님의 거래내역은 전자상거래 등에서의 소비자보호에 관한 법률 제6조 및 동법 시행령 제 6조에 의거하여 표시 및 광고에<br>관한 기록은 6월, 계약 또는 청약 철회 등에 관한 기록은 5년, 대금결제 및 재화 공급 등의 공급에 관한 기록은 5년, 소비자 불만<br> 또는 분쟁처리에 관한 기록은 3년간 기록됩니다.</li>
 					<li></li>
 
 				</ul>
@@ -517,7 +541,7 @@
 			</div>
 			<div class="pw_check">
 				<p>
-					본인 확인을 위해 비밀번호를 입력한 후, "탈퇴확인"버튼을 눌러주세요.<br>(회원 탈퇴시 나의 계정과 나의 주문의 <strong style="color: red;">모든 정보와 DB가 삭제되며,<br>1년 내 재가입/ 회원구매에 제약이 있으니</strong>신중하게 탈퇴신청을 해주세요.)<br>
+					본인 확인을 위해 비밀번호를 입력한 후, "탈퇴확인"버튼을 눌러주세요.<br>(회원 탈퇴시 나의 계정과 나의 주문의 <strong style="color: red;">모든 정보와 DB가 삭제되며,<br>1년 내 재가입 / 회원구매에 제약이 있으니</strong> 신중하게 탈퇴신청을 해주세요.)<br>
 				</p>
 				<div class="pw_check_btn">
 					<label for="pw_check_pass"><strong>비밀번호 :</strong>
