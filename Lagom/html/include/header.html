@@ -221,7 +221,7 @@
 
 		}
 	
-		a#btn_login {
+		.btn_login {
 			display : block;
 			background-color: #8a6d5c;
 			color: white;
@@ -234,14 +234,17 @@
 			text-align: center;
 			font-weight: bold;
 			border-radius: 4px;
+			border : none;
 
 		}
 
-		a#btn_login:hover{
+
+		.btn_login:hover{
 			background-color: #158bd1;
 			border-color: transparent;
 
 		}
+
 		div.div_input{
 			background-color: #ebeded;
 			width :100%;
@@ -378,13 +381,14 @@
 
 
 			<div class="modal_login">
+				<form name="frm_login" action="loginCheck" method="POST">
 				<div class="div_input" id="logom_id">
-					<input type="text" placeholder="이메일" class="input_login" id="input_id">
+					<input type="email" placeholder="이메일" class="input_login" id="input_id" required>
 						<span class="input_box"></span>
 				</div>
 				<div class="div_input" id="logam_pw">
 					<div class="input_pw">
-						<input type="password" placeholder="비밀번호" class="input_login" id="input_pw">
+						<input type="password" placeholder="비밀번호" class="input_login" id="input_pw" required minlength="6" maxlength="18">
 						<span class="pw_eye">
 						<i class="fas fa-eye-slash"></i>
 						</span>
@@ -393,9 +397,9 @@
 				
 
 				<div>
-					<a href="#" id="btn_login">로그인</a>
+					<button type="submit" class="btn_login">로그인</button>
 				</div>
-				
+				</form>
 
 				<div class="member">
 					<a href="#">아이디찾기</a>&nbsp;
