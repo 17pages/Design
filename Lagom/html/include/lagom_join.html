@@ -4,7 +4,7 @@
 	<title>LAGOM : 회원가입</title>
 	<script src="https://kit.fontawesome.com/825f57de13.js" crossorigin="anonymous">
 	</script>
-	<link rel="stylesheet" type="text/css" href="../../css/common.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/common.css">
 	<style type="text/css">
 			*{
 			font-family: Dotum,'돋움',Helvetica,sans-serif;
@@ -41,7 +41,7 @@
 			display: block;
 			width: 250px;
 			height: 90px;
-			background: url("../../img/logo_brown.png") 50% 50%;
+			background: url("../../../img/logo_brown.png") 50% 50%;
 			background-size: cover;
 			margin: 0 auto;
 		}
@@ -300,8 +300,8 @@
 		<header>
 			<div class="header">
 				<h1 class="Lagom_logo">
-				<a href="#" class="l_logo"></a>
-			</h1>
+					<a href="#" class="l_logo"></a>
+				</h1>
 			</div>
 		</header>
 
@@ -313,206 +313,205 @@
 							
 							<span class="simple">SNS계정으로 간편하게 회원가입</span>
 							<div class="sns_wrap">
-								<div class="sns_logo"><a href="#" class="naver">
-									<img src="../../img/naver_round.png" width="48px" height="48px">
-								</a></div>
-								<div class="sns_logo"><a href="#" class="facebook">
-									<img src="../../img/facebook_logo2.png" width="48px" height="48px">
-								</a></div>
-								<div class="sns_logo"><a href="#" class="kakao">
-									<img src="../../img/ic-kakao.svg" width="50" height="50">
-								</a></div>
+								<div class="sns_logo">
+									<a href="#" class="naver">
+										<img src="../../../img/naver_round.png" width="48px" height="48px">
+									</a>
+								</div>
+								
+								<div class="sns_logo">
+									<a href="#" class="facebook">
+										<img src="../../../img/facebook_logo2.png" width="48px" height="48px">
+									</a>
+								</div>
+								
+								<div class="sns_logo">
+									<a href="#" class="kakao">
+										<img src="../../../img/ic-kakao.svg" width="50" height="50">
+									</a>
+								</div>
 							</div>
 						</div>
 
 						<div class="row_group">
-								<div class="join_row">
-							<h3 class="join_title">
-								<label for="id">이메일</label>
-							</h3>
-							<span class="ps_box int_id">
-								<input type="email" id="uid" name="uid" class="int">
-							</span>
-							<span class="error_next_box">필수 정보입니다.</span>
-						</div>
+							
+							<div class="join_row">
+								<h3 class="join_title">
+									<label for="id">이메일</label>
+								</h3>
+								<span class="ps_box int_id">
+									<input type="email" id="uid" name="uid" class="int">
+								</span>
+								<span class="error_next_box">필수 정보입니다.</span>
+							</div>
 						
 
-						<div class="join_row">
-							<h3 class="join_title">
-								<label for="pswd1">비밀번호</label>
-
-							</h3>
-							<span class="pw">8자이상, 영문 대 소문자, 숫자, 특수문자를 사용하세요.</span>
-							<span class="ps_box int_pass">
-								<input type="text" id="upw" name="upw" class="int">
-								<span class="step_url"><span class="pw_lock"></span></span>
-							</span>
-							<span class="error_next_box">필수 정보입니다.</span>
-						</div>
+							<div class="join_row">
+								<h3 class="join_title">
+									<label for="pswd1">비밀번호</label>
+								</h3>
+								<span class="pw">8자이상, 영문 대 소문자, 숫자, 특수문자를 사용하세요.</span>
+								<span class="ps_box int_pass">
+									<input type="text" id="upw" name="upw" class="int">
+									<span class="step_url">
+										<span class="pw_lock"></span>
+									</span>
+								</span>
+								<span class="error_next_box">필수 정보입니다.</span>
+							</div>
 							
 
 							<div class="join_row">
-							<h3 class="join_title">
-								<label for="pswd2">비밀번호 재확인</label>
-							</h3>
-							<span class="ps_box int_pass">
-								<input type="password" id="urpw" name="urpw" class="int">
-								<span class="step_url"><span class="repw_lock"></span></span>
-							</span>
-							<span class="error_next_box">필수 정보입니다.</span>
-						</div>
-							
+								<h3 class="join_title">
+									<label for="pswd2">비밀번호 재확인</label>
+								</h3>
+								<span class="ps_box int_pass">
+									<input type="text" id="urpw" name="urpw" class="int">
+								<span class="step_url">
+									<span class="repw_lock"></span>
+								</span>
+								</span>
+								<span class="error_next_box">필수 정보입니다.</span>
+							</div>
 						</div>
 
 
 						<div class="row_group">
 							<div class="join_row">
-							<h3 class="join_title">
-								<label for="name">이름</label>
-							</h3>
-							<span class="ps_box">
-								<input type="text" id="uname" name="uname" class="int">
-								
-							</span>
-							<span class="error_next_box">필수 정보입니다.</span>
-						</div>
-
-						<div class="join_row join_birthday">
-							<h3 class="join_title">
-								<label for="yy">생년월일</label>
-							</h3>
-							<div class="bir_wrap">
-								<div class="bir_yy">
-									<span class="ps_box">
-										<input type="text" id="yy" name="yy" class="int" placeholder="년(4자)">
-									</span>
-								</div>
-								<div class="bir_mm">
-									<span class="ps_box">
-										<select id="mm" class="sel">
-											<option>월</option>
-											<option value="01">1</option>
-											<option value="02">2</option>
-											<option value="03">3</option>
-											<option value="04">4</option>
-											<option value="05">5</option>
-											<option value="06">6</option>
-											<option value="07">7</option>
-											<option value="08">8</option>
-											<option value="09">9</option>
-											<option value="10">10</option>
-											<option value="11">11</option>
-											<option value="12">12</option>
-										</select>
-									</span>
-								</div>
-								<div class="bir_dd">
-									<span class="ps_box">
-										<input type="text" id="dd" placeholder="일" class="int">
-									</span>
-								</div>
-
+								<h3 class="join_title">
+									<label for="name">이름</label>
+								</h3>
+								<span class="ps_box">
+									<input type="text" id="uname" name="uname" class="int">
+								</span>
+								<span class="error_next_box">필수 정보입니다.</span>
 							</div>
-						
-						</div>	
+
+							<div class="join_row join_birthday">
+								<h3 class="join_title">
+									<label for="yy">생년월일</label>
+								</h3>
+								
+								<div class="bir_wrap">
+									<div class="bir_yy">
+										<span class="ps_box">
+											<input type="text" id="yy" name="yy" class="int" placeholder="년(4자)">
+										</span>
+									</div>
+									
+									<div class="bir_mm">
+										<span class="ps_box">
+											<select id="mm" class="sel">
+												<option>월</option>
+												<option value="01">1</option>
+												<option value="02">2</option>
+												<option value="03">3</option>
+												<option value="04">4</option>
+												<option value="05">5</option>
+												<option value="06">6</option>
+												<option value="07">7</option>
+												<option value="08">8</option>
+												<option value="09">9</option>
+												<option value="10">10</option>
+												<option value="11">11</option>
+												<option value="12">12</option>
+											</select>
+										</span>
+									</div>
+								
+									<div class="bir_dd">
+										<span class="ps_box">
+											<input type="text" id="dd" placeholder="일" class="int">
+										</span>
+									</div>
+								</div>
+							</div>	
 
 							<div class="join_row">
-							<h3 class="join_title">
-								<label for="email">본인 확인 이메일</label>
-							</h3>
-							<span class="ps_box">
-								<input type="text" id="uemail" name="ueamil" class="int" placeholder="선택입력">
-								
-							</span>
-							<span class="error_next_box">필수 정보입니다.</span>
-						</div>	
+								<h3 class="join_title">
+									<label for="email">본인 확인 이메일</label>
+								</h3>
+								<span class="ps_box">
+									<input type="text" id="uemail" name="ueamil" class="int" placeholder="e-mail">
+								</span>
+								<span class="error_next_box">필수 정보입니다.</span>
+							</div>	
 
 							<div class="join_row">
-							<h3 class="join_title">
-								<label for="phone">휴대전화</label>
-							</h3>
-							<span class="ps_box">
-								<input type="tel" id="uphone" name="uphone" class="int" placeholder="'-'없이 입력 예)01012345678">
-								
-							</span>
-							<span class="error_next_box">필수 정보입니다.</span>
-						</div>	
+								<h3 class="join_title">
+									<label for="phone">휴대전화</label>
+								</h3>
+								<span class="ps_box">
+									<input type="tel" id="uphone" name="uphone" class="int" placeholder="'-'없이 입력 예)01012345678">
+								</span>
+								<span class="error_next_box">필수 정보입니다.</span>
+							</div>	
 
 
 							<div class="join_row join_addr">
-							<h3 class="join_title">
-								<label for="addr">주소</label>
-							</h3>
-							<div class="addr_wrap">
-								<div class="addr_mail">
-									<span class="ps_box1">
-										<input type="num" id="mail" name="mail" class="int" placeholder="우편번호(5자리)">
+								<h3 class="join_title">
+									<label for="addr">주소</label>
+								</h3>
+								<div class="addr_wrap">
+									<div class="addr_mail">
+										<span class="ps_box ps_box1">
+											<input type="text" id="sample6_postcode" class="int addr_only" placeholder="우편번호(5자리)"  readonly>
+										</span>
+										<span>
+											<input type="button" onclick="sample6_execDaumPostcode()" class="addr_btn" id="btn_post" value="우편번호 찾기">
+										</span>
+									</div>
 
-										
-									</span>
-									<span>
-										<input type="button" onclick="sample6_execDaumPostcode()" class="addr_btn" value="우편번호 찾기">
+								<div class="addr_addr">
+									<span class="ps_box">
+										<input type="text" id="mail" name="mail" class="int addr_only"  placeholder="주소" readonly>
 									</span>
 								</div>
-							<div class="addr_addr">
-								<span class="ps_box">
-									<input type="text" id="mail" name="mail" class="int"  placeholder="주소">
-								</span>
+
+								<div class="addr_detail">
+									<span class="ps_box">
+										<input type="text" id="sample6_detailAddress" name="mail" class="int" placeholder="상세주소">
+									</span>
+								</div>
+									<span class="error_next_box">필수 정보입니다.
+									</span>
+								</div>	
 							</div>
-							<div class="addr_detail">
-								<span class="ps_box">
-									<input type="text" id="mail" name="mail" class="int" placeholder="상세주소">
-								</span>
-								
-							</div>
-
-								
-								
-								
-							
-							<span class="error_next_box">필수 정보입니다.</span>
-						</div>	
-					</div>
-
-
-
 						</div>
 
 						<div class="btn_double_area">
-						<span><a href="#" class="btn_type btn_agree">가입하기</a></span>
-					</div>
-
-
-
-						
+							<span>
+								<a href="#" class="btn_type btn_agree">가입하기</a>
+							</span>
+						</div>
 					</div>
 				</div>
-
 			</form>
 		</section>
+		
 		<footer>
 			<div id="footer">
-			<ul>
-				<li><a href="#">이용약관</a></li>
-				<li><strong><a href="#">개인정보처리방침</a></strong></li>
-				<li><a href="#">책임의 한계와 법적고지</a></li>
-				<li><a href="#">회원정보 고객센터</a></li>
-			</ul>
+				<ul>
+					<li><a href="#">이용약관</a></li>
+					<li><strong><a href="#">개인정보처리방침</a></strong></li>
+					<li><a href="#">책임의 한계와 법적고지</a></li>
+					<li><a href="#">회원정보 고객센터</a></li>
+				</ul>
 
-			<div id="address">
-				<span>Copyright</span>
-				<span>ⓒ</span>
-				<span><strong><a href="#">LAGOM Corp.</a></strong></span>
-				<span>All Rights Reserved.</span>
+				<div id="address">
+					<span>Copyright</span>
+					<span>ⓒ</span>
+					<span><strong><a href="#">LAGOM Corp.</a></strong></span>
+					<span>All Rights Reserved.</span>
+				</div>
 			</div>
-		</div>
 		</footer>
 	</div>
-
 </body>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="../../js/validation.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+</script>
+<script src="../../../js/validation.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
 		$('#selmail').change(function(){
@@ -523,13 +522,15 @@
 							   .prop('readonly', true);
 			}else{
 				$('#email_url').val('')
-								.removeAttr('readonly')
-								.focus();
+							   .removeAttr('readonly')
+							   .focus();
 			}
 		});
 	});
 
 	$(function(){
+		//비밀번호가 유효한 값인지 체크해주는 flag값
+		var pwFlag = false;
 			
 		// id유효성 체크 : 
 		// #uid인 input태그의 값을 가져와서 체크
@@ -544,44 +545,119 @@
 			//유효성체크 결과로 테두리색과 err메시지를 출력하는
 			//함수 실행
 			ckDesign(result.code, result.desc, 0, 0);
-
 		});
 
 		//비밀번호 유효성 체크
 		$('#upw').keyup(function(){
+			// 1. 사용자가 입력한 값 받기
 			var pw = $.trim($(this).val());
-			var result = joinValidate.checkPw(pw);
-
-			ckDesign(result.code, result.desc, 1, 1);
+			var rpw = $.trim($('#urpw').val());
 		
+			// 2. 유효성체크하기
+			var result = joinValidate.checkPw(pw, rpw);
+				if(result.code == 0 || result.code==10 || result.code==6){
+					pwFlag=true;
+				}else{
+					pwFlag=false;
+				}
+				if(result.code == 10 ){
+					$('.ps_box:eq(2)').css('border', '2px solid #3885ca');
+					$('.error_next_box:eq(2)').css('visibility', 'visible')
+											  .text(result.desc)
+											  .css('color', '#3885ca');				  
+				}
+			//3. 체크 결과에 따라 디자인하기
+			ckDesign(result.code, result.desc, 1, 1);
+			});
+		//비밀번호 재확인 유효성체크
+			$('#urpw').keyup(function(){
+				var pw = $.trim($('#upw').val());
+				var rpw = $.trim($('#urpw').val());
+			// console.log(pw+', '+rpw);
+				var result = joinValidate.checkRpw(pw, rpw, pwFlag);
+			
+				if(result.code == 10 ){
+					$('.ps_box:eq(1)').css('border', '2px solid #3885ca');
+					$('.error_next_box:eq(1)').css('visibility', 'visible')
+					  						  .text(result.desc)
+											  .css('color', '#3885ca');				  
+				}else if(result.code ==6) {
+					$('.ps_box:eq(1)').css('border', '2px solid #3885ca');
+				}
+					ckDesign(result.code, result.desc, 2, 2);
+		     		});
+
+		//이름 유효성체크
+		$('#uname').keyup(function(){
+			var name = $.trim($(this).val());
+			var result = joinValidate.checkName(name);
+			ckDesign(result.code, result.desc, 3,3);
 		});
+
+		//전화번호 유효성체크
+		$('#uphone').keyup(function(){
+			var phone = $.trim($('#uphone').val());
+			var result = joinValidate.checkPhone(phone);
+			ckDesign(result.code, result.desc, 8, 5);
+		});
+		//email 유효성 체크
+		$('#uemail').keyup(function(){
+			var email = $.trim($('#uemail').val());
+			var result = joinValidate.checkEmail(email);
+			ckDesign(result.code, result.desc, 7,4);
+		});
+
+		$('.addr_only').click(function(){
+			//사용자가 우편번호 또는 주소 input을 클릭했을때!
+			$('#btn_post').click();
+		});
+		//상세주소를 클릭하면
+		$('#sample6_detailAddress').click(function(){
+			var addrPost = $('#sample6_postcode').val();
+			if(addrPost == '' || addrPost.length == 0){
+				$('#btn_post').click();
+			}
+		});
+		//주소 유효성체크
+		$('#sample6_detailAddress').keyup(function(){
+			var addrDetail= $.trim($(this).val());
+			var addrPost = $('#sample6_postcode').val();
+			//console.log('우편번호: '+addrPost+' 상세주소 : ' +addrDetail);
+			var result = joinValidate.checkAddr(addrDetail, addrPost);
+
+			if(result.code ==3){//우편번호 & 주소 X
+				ckDesign(result.code, result.desc, 9, 6);
+				ckDesign(result.code, result.desc, 10, 6);
+
+			}else if(result.code ==0) {// 성공
+				ckDesign(result.code, result.desc, 9, 6);
+				ckDesign(result.code, result.desc, 10, 6);
+				ckDesign(result.code, result.desc, 11, 6);
+			}else{//상세주소 통과X 한 모든 경우
+				ckDesign(result.code, result.desc, 11, 6);
+			}
+		});
+
 	});
 
 		function ckDesign(code, desc, line, msg) {
-			if(code !=0) { //통과 X
-				//테두리 색상변경
+			if(code ==0 || code==10) { //통과 o
+				$('.ps_box:eq('+line+')').css('border', '2px solid #3885ca');
+				$('.error_next_box:eq('+msg+')').css('visibility', 'visible')
+												.text(desc)
+												.css('color', '#3885ca');
+				return true;
+			
+			}else{ // 통과 X
+					//테두리 색상변경
 				$('.ps_box:eq('+line+')').css('border', '2px solid #d95339');
 				//에러메시지 출력
 				$('.error_next_box:eq('+msg+')').css('visibility', 'visible')
 												.text(desc)
 												.css('color', '#d05339');
-
-				return false;						
-
-			}else{ // 통과 O
-				$('.ps_box:eq('+line+')').css('border', '2px solid #3885ca');
-				$('.error_next_box:eq('+msg+')').css('visibility', 'visible')
-												.text(desc)
-												.css('color', '#3885ca');
-				
-				return true;
-
-
+ 	 			return false;		
 			}
-			
 		}
-			
-	
 </script>
 <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 <script>
@@ -619,10 +695,9 @@
                     }
                     // 조합된 참고항목을 해당 필드에 넣는다.
                     document.getElementById("sample6_extraAddress").value = extraAddr;
-                
-                } else {
+                    } else {
                     document.getElementById("sample6_extraAddress").value = '';
-                }
+               	}
 
                 // 우편번호와 주소 정보를 해당 필드에 넣는다.
                 document.getElementById('sample6_postcode').value = data.zonecode;
@@ -633,5 +708,4 @@
         }).open();
     }
 </script>
-
 </html>
